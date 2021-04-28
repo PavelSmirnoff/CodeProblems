@@ -26,4 +26,6 @@ Temporary Items
 .apdisk
 
 # IntelliJ
+/.idea/
 /out/
+/target/

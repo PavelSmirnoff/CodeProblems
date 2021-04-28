@@ -9,6 +9,19 @@ package dev.smirnoff.longestsubstring;
  */
 public class LongestSubstring {
     public int lengthOfLongestSubstring(String s) {
-        return 0;
+        if(s.length()<2) return s.length();
+        int start = 0;
+        int maxString = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.substring(start, i).indexOf(s.charAt(i)) != -1) {
+                maxString = Math.max(maxString, i - start);
+                i = ++start;
+            }
+        }
+        return Math.max(maxString, s.length() - start);
+    }
+
+    public boolean checkChar(String str, char c) {
+        return str.indexOf(c) != -1;
     }
 }
