@@ -24,5 +24,23 @@ class ValidParenthesesTest {
         assertFalse(v.isValid("([)]"));
     }
 
+    @Test
+    public void Test5(){
+        assertTrue(v.isValid("{[]}"));
+    }
 
+    @Test
+    public void Test6(){
+        assertTrue(v.isValid("{(([]))}"));
+    }
+
+    @Test
+    public void Test7(){
+        assertFalse(v.isValid("]"));
+    }
+
+    @Test
+    public void Test8(){
+        assertFalse(v.isValid("(])"));
+    }
 }
